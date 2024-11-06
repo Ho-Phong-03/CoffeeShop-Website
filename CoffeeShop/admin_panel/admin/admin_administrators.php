@@ -58,7 +58,7 @@ if(isset($_POST["submit"])) {
 	}
 
 
-	$query = "INSERT INTO administrator(`admin_name`, `admin_phone`,`admin_email`, `admin_image`,`admin_username`, `admin_password`) 
+	$query = "INSERT INTO admin(`admin_name`, `admin_phone`,`admin_email`, `admin_image`,`admin_username`, `admin_password`) 
               VALUES ('$admin_name','$admin_phone','$admin_email','$filename','$admin_username','$admin_password')";
 
 	mysqli_query($conn,$query);
@@ -168,7 +168,7 @@ if(isset($_POST["update_info"])) {
 												<tbody>
 				
 													<?php
-														$result = mysqli_query($conn,"SELECT * FROM administrator"); 
+														$result = mysqli_query($conn,"SELECT * FROM admin"); //administrator
 														while ($row = mysqli_fetch_assoc($result)) { ?>
 
 															<tr>
